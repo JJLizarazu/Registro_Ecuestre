@@ -1,6 +1,10 @@
 # 🏆 Sistema de Registro para Competencias Ecuestres
 
-Un sistema web profesional para el registro y gestión de competencias de salto ecuestre, diseñado específicamente para funcionar en GitHub Pages.
+Un sistema web para el registro y gestión de competencias de salto ecuestre, diseñado específicamente para funcionar en GitHub Pages.
+
+```bash
+https://jjlizarazu.github.io/Registro_Ecuestre/
+```
 
 ## ✨ Características Principales
 
