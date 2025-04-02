@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPETENCIA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Competencia Country Club - Ecuestre</h1>
+        
+        <div id="step1" class="step">
+            <h2>Sube tu Archivo Excel</h2>
+            <input type="file" id="fileInput" accept=".xlsx, .xls">
+            <button id="loadBtn" class="primary">Subir Archivo</button>
+        </div>
+        
+        <div id="step2" class="step hidden">
+            <h2>Selecciona una Prueba</h2>
+            <select id="pruebaSelect"></select>
+            <div class="button-group">
+                <button id="selectPruebaBtn" class="primary">Continuar</button>
+                <button id="backToStep1Btn" class="secondary">Volver</button>
+            </div>
+        </div>
+        
+        <div id="step3" class="step hidden">
+            <h2>Registrar Resultados</h2>
+            <div class="participant-controls">
+                <button id="prevParticipantBtn" class="small">&lt; Anterior</button>
+                <span id="participantCounter"></span>
+                <button id="nextParticipantBtn" class="small">Siguiente &gt;</button>
+            </div>
+            <div id="participantInfo"></div>
+            <div class="input-group">
+                <label for="tiempoInput">Tiempo (segundos):</label>
+                <input type="number" id="tiempoInput" step="0.01" min="0" inputmode="decimal">
+            </div>
+            <div class="input-group">
+                <label for="faltasInput">Faltas:</label>
+                <input type="number" id="faltasInput" min="0" value="0" step="4" inputmode="numeric">
+            </div>
+            <div class="button-group">
+                <button id="backToStep2Btn" class="secondary">Volver</button>
+                <button id="saveResultBtn" class="primary">Guardar</button>
+            </div>
+        </div>
+        
+        <div id="step4" class="step hidden">
+            <h2>Resultados Finales</h2>
+            <div id="resultsContainer"></div>
+            <div class="button-group">
+                <button id="exportResultsBtn" class="primary">Exportar a Excel</button>
+                <button id="newPruebaBtn" class="secondary">Registrar Nueva Prueba</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
